@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Tables and Forms | Week 5
+    </title>
+
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            tr:nth-child(even) {
+                background-color: red;
+            }
+            animation-name: animation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes animation
+        {
+            from {background-color: red;}
+            to {background-color: yellow;}
+        }
+
+        @keyframes formanimation
+        {
+            from {background-color: white;}
+            to {background-color: gray;}
+        }
+        
+        .form {
+            animation-name: formanimation;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Week 5 Tables and Forms</h1>
+
+    <h2>Table Example</h2>
+
+    <table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Program</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            <td>Nick</td>
+            <td>Miner</td>
+            <td>Cybersecurity and Network Engineering</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Doe</td>
+            <td>Computer Science</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Smith</td>
+            <td>Information Technology</td>
+        </tr>
+        <tr>
+            <td>Alice</td>
+            <td>Johnson</td>
+            <td>Software Engineering</td>
+        </tr>
+    </tbody>
+    </table>
+
+    <h2>Form Example</h2>
+    <form action="#" method="post">
+        <label for="username">Username:</label>
+        <br>
+        <input type="text" name="username" placeholder="Enter username..." class="form">
+        <br> <br>
+        <label for ="password">Password</label>
+        <br>
+        <input type="password" name="password" placeholder="Enter password..." class="form">
+        <br>
+    </form>
+<br>
+
+    <h2>Table Inside Form</h2>
+    <form action="#" method="post">
+        <table>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Program</th>
+            </tr>
+            <tr>
+                <td><input type="text" name="firstName" placeholder="Enter First Name..." class="form"></td>
+                <td><input type="text" name="lastName" placeholder="Enter Last Name..." class="form"></td>
+                <td><input type="text" name="program" placeholder="Enter Program..." class="form"></td>
+            </tr>
+        </table>
+
+    </form>
+    
+
+    
+</body>
+
+</html>
