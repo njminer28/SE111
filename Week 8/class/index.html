@@ -1,0 +1,112 @@
+!<!DOCTYPE html>
+<html lang ="en"></html>
+
+<head>
+<meta charset="UTF-8">
+</head>
+
+<body>
+    <div id="query">
+        <input type="button" id="submit" value="Submit">
+    </div>
+
+    <script>
+        //OBJECTS - Everything in JavaScript is an object, besides functions and a few other things
+        var test = 65;
+        var hello = "hello"
+
+        //Key Value Pair
+        var car = {
+            make : "Honda",
+            model : "CRV",
+            year : 1995,
+            wheels : 4
+        }
+
+        var car2 = {
+            make : "Dodge",
+            model : "Hellcat",
+            year : 2022,
+            wheels : 4
+        }
+
+        console.log(car.make)
+        console.log(car2.make)
+
+        function testing(paramOne)
+        {
+            console.log(paramOne)
+        };
+
+        testing(car.wheels)
+
+        //ARRARYS - A list of data, holds memory addresses to objects and where they are stored
+        var arrayTest = ["testOne", "testTwo"]
+        var foo = [10, "Nickelodeon", "25", 1995, true] //You can store anything in an array but it's useless. The data should be related
+        //ARRAYS should only be ONE data type.
+        //2D Array - In array within an array
+        //3D Array  - An array within an array within an array
+        //Continues
+
+        var fruits = [
+            "Banana",
+            "Apple",
+            "Orange",
+            "Pomengranate",
+            "Tomato"
+        ]
+
+        testing(fruits[2+1-2])
+
+        //2D Array
+        var twodArray = [
+            [0,0,6,0,7],
+            [0,0,4,0,0],
+            [0,5,0,30,0],
+            [0,1,0,10,10]
+            
+        ]
+
+        testing(twodArray[2][3])
+
+        //Associative Arrays - The downside to making arrays this way is that they don't 
+        // play well with for loops. For loops are great for looping through arrays, 
+        // but if the array doesn't hasbe a number index, there's no way to increment the index
+        var person = []
+        person["first"] = "Jay"
+        person["last"] = "Vorhees"
+
+        //The Upside - associative arrays are great for state macines. 
+        // Arrays make using state machines easier to write because you can essentially label 
+        // the functions rather than having to remember thier index numbers
+
+        //For Loops - Consist of a variable declaration, a condition and an incremental
+
+        for(let i=0; i <= 10; i++) {
+            console.log(i)
+        }
+
+        //Array in a For Loop
+        var cars = [
+            "Subaru",
+            "Honda",
+            "Toyota"
+        ]
+            //VARIABLIE DEC. | CONDITION | INCREMENTAL
+        for(let s = 0; s < cars.length; s++) {
+            console.log(testing(s))
+        }
+
+    var mapString = ""
+            //Looping through the inital array
+        for(let i = 0; i<twodArray.length; i ++){
+            //Looping through each element
+            for(let j = 0; j <twodArray[i].length; j ++){
+                //Adding the index to a string
+                mapString += twodArray[i][j]
+            }
+        }
+        console.log(mapString)
+    </script>
+
+</body>
